@@ -1,17 +1,21 @@
 import React, { Component } from "react";
 class Child extends Component {
   constructor(props) {
-    console.log("component Initialized child");
+    console.log("Child constructor ");
     super(props);
-    this.state = {
-      count: 0,
-    };
+    this.state = {};
   }
   componentDidMount() {
-    console.log("component didMount child");
+    console.log("Child Mounted");
+  }
+    componentDidUpdate(){
+    console.log("children componentDidUpdate called")
+  }
+  componentWillUnmount(){
+      console.log("component unmounted")
   }
   render() {
-    return <h2>Life Cycle Component</h2>;
+    return <h2>Life Cycle Component {this.props.counter}</h2>;
   }
 }
 

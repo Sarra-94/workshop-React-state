@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
 
-export default function Count({count}) {
-    return (
-        <div>
-            <p style={{ fontSize: "100%", textAlign: "center" }}>{count}</p>
-        </div>
-    )
+export default function Count({ counter, children ,name}) {
+  return (
+    <div>
+      <h2>this is Count component</h2>
+      <h3>{counter}</h3>
+      <h3>{name}</h3>
+      {children}
+    </div>
+  );
 }
